@@ -1,0 +1,57 @@
+@import "colors";
+.paymentsuccess {
+  background-color: $cyan;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  > div {
+    height: 70%;
+    background-color: white;
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    > h1 {
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      text-align: center;
+      margin-top: 2rem;
+      font: 100 3rem;
+    }
+    > h2 {
+      margin: 1rem;
+    }
+    a {
+      background-color: $cyan;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: 5px;
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 1rem;
+      cursor: pointer;
+    }
+    > p {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .paymentsuccess > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > h1 {
+      font-size: 1.5rem;
+    }
+    > h2 {
+      margin-bottom: 1rem;
+    }
+  }
+}

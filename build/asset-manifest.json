@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0465fc20.css",
+    "main.js": "/static/js/main.4e2f3192.js",
+    "static/media/carousel_1.jpg": "/static/media/carousel_1.1692ce14d892dd35ea2d.jpg",
+    "static/media/sneakerMain.png": "/static/media/sneakerMain.de69776d7e4728ea13a3.png",
+    "static/media/carousel_3.jpg": "/static/media/carousel_3.7058cd35c7b93f5e10c2.jpg",
+    "static/media/back-1.jpg": "/static/media/back-1.5c812d0cac53418c1a5d.jpg",
+    "static/media/carousel_2.jpg": "/static/media/carousel_2.87172807fcd5baebdc46.jpg",
+    "static/media/Ro2.jpg": "/static/media/Ro2.782709af722520df2dc3.jpg",
+    "static/media/vector1.png": "/static/media/vector1.19bb9394e5c7fcd94563.png",
+    "static/media/Ro.jpg": "/static/media/Ro.db68012c7b8706aa629c.jpg",
+    "static/media/sneakers-2.png": "/static/media/sneakers-2.db839f42fdeb771f12e3.png",
+    "static/media/sneakers-6.png": "/static/media/sneakers-6.a4ccd8f330a2c2c1f5d3.png",
+    "static/media/sneakers-5.png": "/static/media/sneakers-5.3b337ed4809f9647df50.png",
+    "static/media/sneakers-3.png": "/static/media/sneakers-3.5afa0c7f6fa256dada9f.png",
+    "static/media/sneakers-4.png": "/static/media/sneakers-4.465dc28d5aa06718f26d.png",
+    "static/media/sneakers-1.png": "/static/media/sneakers-1.c372353654306226ceb7.png",
+    "index.html": "/index.html",
+    "main.0465fc20.css.map": "/static/css/main.0465fc20.css.map",
+    "main.4e2f3192.js.map": "/static/js/main.4e2f3192.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0465fc20.css",
+    "static/js/main.4e2f3192.js"
+  ]
+}
