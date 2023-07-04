@@ -17,6 +17,7 @@ const Contact = () => {
             opacity: 1,
           }}
           transition={{ delay: 0.2 }}
+          action="/"
         >
           <h2>Contact Us</h2>
           <input type="text" placeholder="Name" />
