@@ -2,7 +2,7 @@ import React from "react";
 import mainSneaker from "../../assets/sneakerMain.png";
 import { motion } from "framer-motion";
 // import Founder from "./Founder";
-import Carousel from "./CarouselComp";
+// import Carousel from "./CarouselComp";
 import Catalogue from "./catalogue";
 import Footer from "./Footer";
 

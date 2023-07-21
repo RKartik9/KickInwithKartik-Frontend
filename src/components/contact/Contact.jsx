@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import sneaker from "../../assets/sneakerMain.png";
-import Footer from "../home/Footer";
+// import Footer from "../home/Footer";
 
 const Contact = () => {
   return (
