@@ -42,7 +42,7 @@ Contributions are welcome! If you would like to contribute to the project, pleas
 5. Open a pull request.
 ## Contact
 
-If you have any questions or suggestions regarding the project, please feel free to contact Rohit Kumar at urskartik9@gmail.com
+If you have any questions or suggestions regarding the project, please feel free to contact me at urskartik9@gmail.com
 
 ---
 
