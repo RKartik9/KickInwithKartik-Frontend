@@ -7,7 +7,7 @@ import Loader from "../layout/Loader";
 
 const Profile = () => {
   const options = {
-    initital: {
+    initial: {
       y: "-100%",
       opacity: 0,
     },
