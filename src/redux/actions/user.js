@@ -8,7 +8,7 @@ export const loadUser = () => async (dispatch) => {
     });
 
     const { data } = await axios.get(`${server}/me`, {
-      withCredentialst: true,
+      withCredentials: true,
     });
 
     dispatch({
