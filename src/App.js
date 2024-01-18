@@ -1,4 +1,6 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { GuardProvider, GuardedRoute } from "react-router-guards";
 import Home from "./components/home/Home";
 import Header from "./components/layout/Header";
 import Footer from "./components/home/Footer";
@@ -43,7 +45,7 @@ import "./styles/users.scss";
 
 function App() {
   const dispatch = useDispatch();
-  const { error, message, isAuthenticated, user } = useSelector(
+  const { error, message, isAuthenticated } = useSelector(
     (state) => state.auth
   );
 
@@ -66,55 +68,78 @@ function App() {
     }
   }, [dispatch, error, message]);
 
+  const requireLogin = (to, from, next) => {
+    if (to.meta.auth) {
+      if (isAuthenticated) {
+        next();
+      } else {
+        next.redirect("/login");
+      }
+    } else {
+      next();
+    }
+  };
+
   return (
     <Router>
       <Header isAuthenticated={isAuthenticated} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/cart" element={<Footer />} />
-        <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
+      <GuardProvider guards={[requireLogin]}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Footer />} />
+          <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
 
-        <Route
-          path="/login"
-          element={
-            <ProtectedRoute isAuthenticated={!isAuthenticated} redirect="/me">
-              <Login />
-            </ProtectedRoute>
-          }
-        />
+          <Route path="/login" element={<Login />} />
 
-        <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
           <Route path="/me" element={<Profile />} />
           <Route path="/shipping" element={<Shipping />} />
           <Route path="/ConfirmOrder" element={<ConfirmOrder />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/orders/:id" element={<OrderDetails />} />
-        </Route>
 
-        <Route
-          element={
-            <ProtectedRoute
-              isAuthenticated={isAuthenticated}
-              adminRoute={true}
-              isAdmin={user && user.role === "admin"}
-              redirectAdmin="/me"
-            />
-          }
-        >
-          <Route path="/admin/dashboard" element={<Dashboard />} />
-          <Route path="/admin/users" element={<Users />} />
-          <Route path="/admin/orders" element={<UserOrders />} />
-        </Route>
+          <Route
+            path="/admin"
+            element={
+              <GuardedRoute
+                path="/"
+                element={<Dashboard />}
+                meta={{ auth: true, adminRoute: true }}
+              />
+            }
+          />
+          <Route
+            path="/admin/users"
+            element={
+              <GuardedRoute
+                path="/"
+                element={<Users />}
+                meta={{ auth: true, adminRoute: true }}
+              />
+            }
+          />
+          <Route
+            path="/admin/orders"
+            element={
+              <GuardedRoute
+                path="/"
+                element={<UserOrders />}
+                meta={{ auth: true, adminRoute: true }}
+              />
+            }
+          />
 
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </GuardProvider>
       <Toaster />
       {/* <Footer /> */}
     </Router>
   );
 }
+
+// export default App;
 
 export default App;
