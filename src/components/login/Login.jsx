@@ -5,7 +5,7 @@ import { server } from "../../redux/store";
 
 const Login = () => {
   const loginHandler = () => {
-    window.open(`${server}/login`, "_self");
+    window.open(`${server}/googlelogin`, "_self");
   };
   return (
     <section className="login">
