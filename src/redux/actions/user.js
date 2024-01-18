@@ -12,8 +12,8 @@ export const loadUser = () => async (dispatch) => {
     });
 
     dispatch({
-      type: "loadUserRequest",
-      payload: data.user,
+      type: "loadUserSuccess", // Corrected action type
+      payload: data.user, // Corrected payload
     });
   } catch (error) {
     dispatch({
