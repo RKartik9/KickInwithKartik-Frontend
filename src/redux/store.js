@@ -16,4 +16,4 @@ const store = configureStore({
 
 export default store;
 
-export const server = "https://kickinwithkartik.vercel.app/api/v1";
+export const server = "https://backend-testing-sigma.vercel.app/api/v1";
