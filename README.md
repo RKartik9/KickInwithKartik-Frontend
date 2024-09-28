@@ -1,10 +1,13 @@
-# Sneakers Website
+# SneakersHub
 
 This is a sneakers website built using React.js and Sass. The website offers a wide range of shoes for sneaker enthusiasts.
 
 ## About the Project
 
 The project is developed by Rohit Kumar and serves as an online sneaker store. It provides users with the ability to browse and purchase sneakers from various brands. The website is designed to be visually appealing and user-friendly, providing a seamless shopping experience for customers.
+
+![UrbanKart Logo](./public/sneaker-main.jpg)
+
 
 ## Features
 
